@@ -1,0 +1,168 @@
+.header{
+    margin:0px;
+    height:200px;
+    padding:2rem;
+    font-size:4rem;
+    font-weight: bold;
+        
+}
+.header p{
+    border-radius:50px;
+    width:92%;
+    float: right;
+    margin-top:10px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);;
+    background-image: linear-gradient(rgb(170, 105, 231),rgb(118, 21, 209));
+    /* background-image: linear-gradient(rgb(170, 105, 231),rgb(115, 84, 144)); */
+}
+.header img{
+    width:8%;
+    height:110px;
+}
+
+hr{
+    width:100%;
+    height: 10px;
+    background-image: linear-gradient(pink,blue);
+}
+
+
+.bottomConatiner{
+    margin:0px;
+    margin-top: 0px;
+    width:100%;
+    height: 100%;
+    font-size: 0.5rem;;
+}
+
+
+
+.left form{
+    background:rgba(0,0,0, 0.5) url("https://img.freepik.com/premium-vector/woman-with-headphones-microphone-with-computer_113065-137.jpg");
+    background-color: transparent;
+    width:50%;
+    min-height: 72vh;
+    float: left;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+          
+}
+
+.left input{
+    background-color: aliceblue;
+    margin-top:60px;
+    width:450px;
+    height:35px;
+    border-radius:15px;
+    border:1px solid rgb(155, 143, 162);   
+}
+
+.left button{
+    margin-top: 20px;
+    border-radius:15px;
+    
+}
+
+.right{
+    min-height: 72vh;
+}
+
+
+.right li{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0.5rem;
+    margin-left: 3px;
+    margin-right:2px;
+    padding-bottom: 0rem;
+    border:1px solid rgb(155, 143, 162); 
+    border-radius:25px;
+    margin-bottom:5px;
+    font-size: 1.5rem;
+    font-weight:500
+}
+
+
+.content div .icon{
+    padding:0.5rem;
+    border-radius: 10%;
+    padding-top: 1.5px;
+    font-size:1.5rem;   
+    padding-bottom: 5px;
+    }
+
+
+.searchSection form{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.searchSection form input{
+    border:1px solid rgb(155, 143, 162); 
+    background-color: aliceblue;
+}
+
+.searchSection button{
+    width:15%;
+}
+
+.search{
+    width:80%;
+    border-radius: 15px;  
+}
+
+.content{
+    overflow-y: scroll;
+    height:445px;
+  
+}
+
+.content button{
+    border-radius: 15px;
+}
+
+.right li input{
+    width:35px;
+    height:40px
+}
+
+.optional{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 1124px){
+    .left input{
+        width:350px;
+        height:35px;
+        border-radius:15px;
+    }
+    .header{
+        height:175px;
+        padding:1rem;
+    }
+    .header p{
+        width:70%;
+    }
+    .header img{
+        width:18%;
+    }
+    .optional img{
+        overflow-x:auto;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .left input{
+        width:240px;
+        height:35px;
+        border-radius:15px;
+    }
+}
