@@ -1,3 +1,19 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "text": "Do exercise daily"
+    },
+    {
+      "id": 2,
+      "checked": true,
+      "text": "Attend Meeting at 5PM"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "text": "Pick up daughter today"
+    }
+  ]
 }

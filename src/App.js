@@ -4,9 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css";
 import { useEffect } from "react";
 import apiRequest from "./apiRequest";
+import Footer from "./components/Footer";
 
 const App=()=>{
   const API_URL="http://localhost:3500/items";
+  const [wholeData,setWholeData]=useState([])
   const [data,setData]=useState([]);
   const [newItem,setNewItem]=useState('');
   const [search,setSearch]=useState('');
@@ -20,10 +22,10 @@ const App=()=>{
         if(!response.ok) throw Error("Data not received")
         const listItems= await response.json();
         setData(listItems);
+        setWholeData(listItems);
         setFetchError(null);
       }catch(err){
         setFetchError(err.message);
-        console.log("from catch",fetchError);
       }
       finally{
         setIsLoading(false);
@@ -43,6 +45,7 @@ const App=()=>{
     
     const listItems=[...data,addNewItem];
     setData(listItems);
+    setWholeData(listItems);
 
     const postOptions={
       method:"POST",
@@ -53,6 +56,7 @@ const App=()=>{
     }
     const result=await apiRequest(API_URL,postOptions);
     if(result){setFetchError(result);}
+    window.location.reload();
 
   }
   
@@ -62,6 +66,7 @@ const App=()=>{
       item.id === id ?{...item,checked:!item.checked}:item
     );
     setData(listItems);
+    setWholeData(listItems);
     const myItem=listItems.filter((item)=>item.id ===id)
     const req_URL=`${API_URL}/${id}`  
 
@@ -74,6 +79,7 @@ const App=()=>{
     }
     const result=await apiRequest(req_URL,updateOptions);
     if(result){setFetchError(result);}
+    window.location.reload()
   }
 
 
@@ -81,14 +87,15 @@ const App=()=>{
     const listData=data.filter((item)=>
       item.id !==id
     )
-    
-    setData(listData)
+    setData(listData);
+    setWholeData(listData);
 
     const deleteOptions={method:'DELETE'}
 
     const req_URL=`${API_URL}/${id}`
     const result=await apiRequest(req_URL,deleteOptions);
     if(result){setFetchError(result);}
+    window.location.reload();
 
   }
 
@@ -113,6 +120,12 @@ const App=()=>{
       isLoading={isLoading}
     >
     </Header>
+    <Footer 
+      data={data}
+      setData={setData}
+      wholeData={wholeData}
+      handleDelete={handleDelete}
+    />
   </>
 }
 

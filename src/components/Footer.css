@@ -1,0 +1,38 @@
+.footer{
+    background-image: linear-gradient(rgb(170, 105, 231),rgb(118, 21, 209));
+    /* margin-top: 490px; */
+    height: 73px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: baseline;
+}
+
+.itemLengthDisplay{
+    font-size: 1.5rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    width:30%;
+    margin-left:20px;
+}
+
+.centerButtons{
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+}
+
+.lastButton{
+    width:30%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+button{
+    border-radius: 5%;
+    border:3px solid rgb(179, 128, 199);
+    background-color: rgb(244, 241, 247);
+}

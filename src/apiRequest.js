@@ -1,7 +1,6 @@
 const apiRequest=async (url,optionsObject)=>{
     const errMsg=null;
     try{
-        console.log(optionsObject);
         const response=await fetch(url,optionsObject);
 
         if(!response.ok){

@@ -1,12 +1,13 @@
 body{
     margin:0;
     padding:0;
-    color:aliceblue;
+    /* color:aliceblue; */
     background-color:rgb(238, 226, 250) ;
     background-blend-mode: multiply; 
     background-repeat: no-repeat;
     background-size: cover;  
     font-style: italic; 
+    overflow: hidden;
 }
 li{
     color:black;

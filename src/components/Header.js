@@ -6,11 +6,12 @@ import Left from "./Left";
 
 const Header=({handleCheck,handleDelete,handleSubmit,newItem,setNewItem,search,setSearch,items,fetchError,isLoading})=>{
 
-    return <main>
+    return <>
+     <main>
         
         <div className="header text-center">
             <img src={require('D:/Extra/ReactJS/ToDoList/todolist/src/todo.png')} alt="todo"></img>
-            <p>TODO-List</p>
+            <p style={{color:"aliceblue"}}>TODO-List</p>
             <hr></hr>
         </div>
         <div className="bottomContainer">
@@ -23,7 +24,8 @@ const Header=({handleCheck,handleDelete,handleSubmit,newItem,setNewItem,search,s
             
             {isLoading && <p style={{color:"black" , display:'flex',justifyContent:"center",fontSize:"2rem", fontWeight:"bolder"}}>...Loading Tasks</p> }
 
-            {!isLoading  && <div className="right">
+            {!isLoading  && 
+            <div className="right">
                 {fetchError && <p style={{color:"black" , display:'flex',justifyContent:"center",fontSize:"2rem"}}>{`Error:${fetchError}`}</p>}
                 
                 {(items.length)?(
@@ -37,16 +39,15 @@ const Header=({handleCheck,handleDelete,handleSubmit,newItem,setNewItem,search,s
                     ):(
                         
                     <div className="optional">
-                        <img src={require('D:/Extra/ReactJS/ToDoList/todolist/src/sleep1.png')}  alt="Fresh"></img>
+                        <img  src={require('D:/Extra/ReactJS/ToDoList/todolist/src/sleep1.png')}  alt="Fresh"></img>
                     </div>
                 )}
-
-           </div>}
                 
+           </div>
+           }
         </div>
-        
-        
     </main>
+    </>
 }
 
 export default Header;
